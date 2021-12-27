@@ -1,84 +1,342 @@
-<!DOCTYPE html>
-<html  >
-<head>
-  <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.1.4, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/mbr-121x121.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
-</head>
-<body>
-  
-  <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
-    
-    <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="index.html">
-                        <img src="assets/images/mbr-121x121.png" alt="Mobirise" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Интернет-технологии</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item dropdown open"><a class="nav-link link text-black dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true">Перечень работ</a><div class="dropdown-menu"><a class="text-black dropdown-item text-primary display-4" href="page1.html">Лабораторная работа 1</a><a class="text-black dropdown-item text-primary display-4" href="page2.html" aria-expanded="false">Лабораторная работа 2</a><a class="text-black dropdown-item text-primary display-4" href="page3.html" aria-expanded="false">Лабораторная работа 3</a></div></li></ul>
-                
-                
-            </div>
-        </div>
-    </nav>
+<link rel="stylesheet" href="style.css">
+<link href="carousel.css" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/135/135694.png">
+<script src="bootstrap.bundle.min.js"></script>
+<script src="choise.js"></script>
+<script src="calculate.js"></script>
+<script src="receipts.js"></script>
+<script src="save.js"></script>
+<script src="search.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
-</section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-<section class="header1 cid-s48MCQYojq mbr-fullscreen mbr-parallax-background" id="header1-f">
-
-    
-
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(255, 255, 255);"></div>
-
-    <div class="align-center container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Добро пожаловать!</strong></h1>
-                
-                <p class="mbr-text mbr-fonts-style display-7">Меня зовут Николай :)<br>Группа ИДМ-20-04.<br>Я создал этот сайт для нашей чудесной команды T&amp;J.<br><br>Помимо меня, над проектом работают:<br></p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-success display-4" href="page4.html"><span class="mobi-mbri mobi-mbri-users mbr-iconfont mbr-iconfont-btn"></span>Лучшие люди в мире</a></div>
-            </div>
-        </div>
+<title>Здоровъ сыть</title>
+<header>
+  <nav class=" navbar navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Здоровъ сыть</a>
+      <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+          </li>
+        </ul> -->
+      <div class="d-flex">
+        <input id="inputSearch" class="form-control" type="search" placeholder="Рецепт" aria-label="Search">
+        <button onclick="Search()" class="btn btn-outline-success">Поиск</button>
+      </div>
+      <!-- </div> -->
     </div>
+  </nav>
+</header>
+<section class="jumbotron mainstyle" data-section-name="Zdorov">
+  <div class="shadowed-window">
+      <div class="container">
+          <div class="row justify-content-center">
+              <!-- ы<img src=".." class="main-logo"> -->
+              <div class="text-center col-sm-10 p-4" id="menu">
+                  <h1 class="display-3 text-light m-4 mystroke">Здоровъ сыть - сайт здорового питания</h1>
+                  <h2 class="text-light m-4 mystroke d-lg-none">Узнайте своё количество килокалорий для здоровой жизни</h2>
+                  <a class="btn btn-primary pl-4 pr-4 d-lg-none" href="#forma" role="button">Перейти к заполнению формы</a>
+                  <!-- В допилить сылки -->
+              <div class="row ">
+                <div class="col-sm-4 mb-4 d-flex d-none d-lg-block">
+                  <div class="card border-0 card-height my-card">
+                    <a href="#popular"><img  src="pics/card1.png" alt="Card image" style="width:100%"></a>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-4 d-flex d-none d-lg-block">
+                  <div class="card border-0 card-height my-card">
+                    <a href="#select_dish"><img  src="pics/card1.png" alt="Card image" style="width:100%"></a>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-4 d-flex d-none d-lg-block">
+                  <div class="card border-0 card-height my-card">
+                    <a href="#forma"><img  src="pics/card1.png" alt="Card image" style="width:100%"></a>
+                  </div>
+                </div>
+
+          </div>
+      </div>
+  </div>
 </section>
+<main>
 
-<section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div id="popular" class="col-md">
+    <h2  align="center" class="featurette-divider">Самые популярные рецепты за последний месяц.</h2>
+  </div>
+  <div  class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
 
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/h" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Designed with Mobirise <a href="https://mobirise.site/j" style="color:#aaa;">page</a> creator</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
-</body>
-</html>
+        <div class="col-sm-4 mb-4 d-flex">
+          <div class="card border-0 card-height">
+            <div class="text-center">
+              <img src="https://рецепты.здоровое-питание.рф/upload/iblock/1e5/1e5e957d93b566c369775fcadbc51b2f.jpg"
+                width="140" height="140" background="#777" color="#777" class="rounded-circle text-center">
+            </div>
+            <div class="card-body">
+              <h2>Сырный суп-пюре с брокколи и грибами</h2>
+              <p>Супы-пюре — отличный вариант, чтобы разнообразить свое меню зимой. Они горячие, сытные, плотные,
+                подходят
+                для
+                питания всех...</p>
+            </div>
+            <div class="card-footer text-center border-0 bg-transparent">
+              <p><a onclick="ToReceipt(0)" class="btn btn-secondary" href="#Receipt">Подробнее &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mb-4 d-flex">
+          <div class="card border-0 card-height">
+            <div class="text-center">
+              <img src="https://рецепты.здоровое-питание.рф/upload/iblock/46e/46ed3b979cdf9178858f500d2b6e1fef.png"
+                width="140" height="140" background="#777" color="#777" class="rounded-circle text-center">
+            </div>
+            <div class="card-body">
+              <h2>Салат с говядиной и брокколи</h2>
+              <p>Сочетание отварной говядины, брокколи и легкого йогурта делают этот салат настоящей находкой для
+                адептов
+                здорового питания...</p>
+            </div>
+            <div class="card-footer text-center border-0 bg-transparent">
+              <p><a onclick="ToReceipt(1)" class="btn btn-secondary" href="#Receipt">Подробнее &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mb-4 d-flex">
+          <div class="card border-0 card-height">
+            <div class="text-center">
+              <img src="https://рецепты.здоровое-питание.рф/upload/iblock/0ee/0ee58613aded3592229f39dec985488f.jpg"
+                width="140" height="140" background="#777" color="#777" class="rounded-circle text-center">
+            </div>
+            <div class="card-body">
+              <h2>Куриные маффины с брокколи</h2>
+              <p>Курица и творог – лучшие источники белка, а их жирность совсем невысока. Брокколи и отруби в составе
+                маффинов
+                обеспечат клетчаткой, снижая калорийность...</p>
+            </div>
+            <div class="card-footer text-center border-0 bg-transparent">
+              <p><a onclick="ToReceipt(2)" class="btn btn-secondary" href="#Receipt">Подробнее &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+    <div id="forma" class="row featurette">
+      <div class="col-md-7">
+        <h1 class="featurette-divider">Первый шаг на пути к здоровому питанию. <span class="text-muted">Это подсчёт
+            дневной нормы ваших каллорий.</span>
+          <p class="lead">Вбейте данные в поля и узнайте вашу дневную норму!</p>
+        </h1>
+
+      </div>
+      <div class="col-md-5 featurette-divider">
+        <div class="form-group row">
+          <label for="inputAge" class="col-sm-2 col-form-label">Возраст</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="inputAge" placeholder="Возраст" type="number" name="AgeN" min="3" max="110">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <label for="inputWeight" class="col-sm-2 col-form-label">Вес</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="inputWeight" placeholder="Вес" type="number" name="WeightN" min="30"
+              max="250">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <label for="inputHeight" class="col-sm-2 col-form-label">Рост</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="inputHeight" placeholder="Рост" type="number" name="HeightN" min="50"
+              max="300">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="inlineFormCustomSelect">Активность</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="ativity">
+              <option selected>Выбор...</option>
+              <option value="1">Основной обмен</option>
+              <option value="1.2">Минимум/отсутствие физической нагрузки</option>
+              <option value="1.3">3 раза в неделю</option>
+              <option value="1.4">5 раз в неделю</option>
+              <option value="1.6">Каждый день</option>
+              <option value="1.8">Интенсивно каждый день</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Пол</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="MaleB" value="Male" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Мужской
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="FemaleB" value="Female">
+                <label class="form-check-label" for="gridRadios2">
+                  Женский
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="It" disabled>
+                <label class="form-check-label" for="gridRadios3">
+                  Другой
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button onclick="CountCal()" type="submit" class="btn btn-primary">Посчитать</button>
+          </div>
+        </div>
+        <br>
+        <div id="result" class="d-none">
+          <p class="lead" id="resultS">Ваша дневная норма киллокаллорий: </p>
+          <p class="lead" id="resultDown">Ваша дневная норма киллокаллорий для умеренного худения: </p>
+          <p class="lead" id="resultFastDown">Ваша дневная норма киллокаллорий для ускоренного худения: </p>
+        </div>
+      </div>
+    </div>
+
+    <hr id="ChoiseDishesScroll" class="featurette-divider">
+    <div class="col-md">
+      <h2 id="select_dish" align="center" class="featurette-divider">Выбор блюда</h2>
+    </div>
+	<div class="backButton" align="center">
+	  <button id="moveBack" onclick="Choise()" type="button"
+               class="btn btn-sm btn-outline-secondary" style="margin-top: -60; margin-bottom: 30; margin-left: 40000;">Назад</button>
+	</div>
+    <div id="ChoiseDishes" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://i.ytimg.com/vi/iEdKkNYxcpc/maxresdefault.jpg"
+            class="bd-placeholder-img card-img-top" height="225"></img>
+
+          <div class="card-body">
+            <p class="card-text">Яичные блюда на завтрак — довольно популярное блюдо во многих странах мира. Это
+              объясняется и доступностью, и ценой, и быстротой приготовления.</p>
+            <div class="justify-content-between align-items-center">
+              <button id="1" value="eggs" onclick="Choise(this.value)" type="button"
+                class="btn btn-lg btn-outline-secondary">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="pics/kasha.png"
+            class="bd-placeholder-img card-img-top" height="225"></img>
+
+          <div class="card-body">
+            <p class="card-text">Каша – идеальный здоровый завтрак.Позавтракав кашей, вы не захотите перекусывать до
+              обеда.</p>
+            <div class="justify-content-between align-items-center">
+              <button id="2" value="kasha" onclick="Choise(this.value)" type="button"
+                class="btn btn-lg btn-outline-secondary">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://phonoteka.org/uploads/posts/2021-05/1621702867_22-phonoteka_org-p-tvorog-fon-23.jpg"
+            class="bd-placeholder-img card-img-top" height="225"></img>
+
+          <div class="card-body">
+            <p class="card-text">Кисломолочные продукты на завтрак, всего лишь сто лет назад кисломолочные продукты
+              относились к разряду невероятно дорогих и ценных лекарств.</p>
+            <div class="justify-content-between align-items-center">
+              <button id="3" value="cheese" onclick="Choise(this.value)" type="button"
+                class="btn btn-lg btn-outline-secondary">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Receipt" class="row featurette d-none">
+      <hr class="featurette-divider">
+      <div class="col-md-7">
+        <h1 id="NameReceipt">Сырный суп-пюре с брокколи и грибами</h1>
+        <p id="DescribeReceipt">Описание</p>
+        <p id="TimeReceipt">Время приготовления: 40 мин</p>
+        <p id="CcalReceipt">Киллокаллории: 79ккал/100 г</p>
+        <p id="WeightReceipt">Вес блюда: 600 г.</p>
+        <div class="ingredientsBox-wrap">
+          <div class="ingredientsBox-title">
+            <h3>Ингредиенты</h3>
+          </div>
+          <ul id="Ingridient" class="list-group list-group-flush"></ul>
+          <br>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img id="ImgRec"
+          src="https://рецепты.здоровое-питание.рф/upload/iblock/1e5/1e5e957d93b566c369775fcadbc51b2f.jpg" width="500"
+          height="500" background="#eee" color="#aaa" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+      </div>
+      <div class="card mb-3">
+        <div id="AllSteps" class="row no-gutters align-items-center">
+        </div>
+      </div>
+    </div>
+    <div id="pdfBut" class="d-none">
+      <div class="form-group row-sm-4">
+        <button onclick="SavePdf()" type="button" class="btn btn-lg btn-outline-secondary">Скачать Pdf
+          рецепта</button>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="inputAge" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="inputEmail" placeholder="stankin@stankin.ru" type="email">
+        </div>
+        <div class="col-sm-4">
+          <button onclick="SavePdf()" type="button" class="btn btn-lg btn-outline-secondary">Послать Pdf
+            рецепта</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
